@@ -1,0 +1,37 @@
+% AUTHORYEAR quotation, WORD STYLE, 1.5 linespacing, 
+
+\documentclass[12pt, titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[parfill]{parskip}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[style=authoryear, maxbibnames=99, maxcitenames=1, citetracker=true]{biblatex}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\AtEveryCitekey{\ifciteseen{}{\defcounter{maxnames}{99}}}
+
+\addbibresource{references.bib}
+%Tällä nää nimet saa oikeesee järjestyksee lopun viitteissä
+\DeclareNameAlias{author}{family-given}
+\DeclareNameAlias{editor}{family-given}
+
+\title{\textbf{Latex Template\large\\Subtitle}}
+\author{\textbf{Johanna Laitila}\\Additional Info\\\texttt{\href{mailto:email@mail.mail}{email@mail.mail}}}
+\date{\today}
+\linespread{1.25} % This should correlate to 1.5 linespacing in Word t. Google
+
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}
+\setcounter{page}{2}
+\tableofcontents
+
+\newpage
+\input{contents}
+
+\newpage
+\printbibliography[heading=bibintoc,title={Viitteet}]
+\end{document}
