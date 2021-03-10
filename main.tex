@@ -1,4 +1,6 @@
 % AUTHORYEAR quotation, WORD STYLE, 1.5 linespacing, 
+% Please note that this seems to work in Overleaf, but has problems 
+% with Texmaker (or my local LaTeX setup)
 
 \documentclass[12pt, titlepage]{article}
 \usepackage[utf8]{inputenc}
@@ -13,7 +15,7 @@
 \AtEveryCitekey{\ifciteseen{}{\defcounter{maxnames}{99}}}
 
 \addbibresource{references.bib}
-%Tällä nää nimet saa oikeesee järjestyksee lopun viitteissä
+% This makes the names go in the right order in references
 \DeclareNameAlias{author}{family-given}
 \DeclareNameAlias{editor}{family-given}
 
@@ -33,5 +35,5 @@
 \input{contents}
 
 \newpage
-\printbibliography[heading=bibintoc,title={Viitteet}]
+\printbibliography[heading=bibintoc,title={References}]
 \end{document}
