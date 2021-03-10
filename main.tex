@@ -1,6 +1,5 @@
 % AUTHORYEAR quotation, WORD STYLE, 1.5 linespacing, 
-% Please note that this seems to work in Overleaf, but has problems 
-% with Texmaker (or my local LaTeX setup)
+% If running on a local system, make sure it runs biber and not bibtex
 
 \documentclass[12pt, titlepage]{article}
 \usepackage[utf8]{inputenc}
@@ -12,7 +11,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{caption}
-\AtEveryCitekey{\ifciteseen{}{\defcounter{maxnames}{99}}}
+
 
 \addbibresource{references.bib}
 % This makes the names go in the right order in references
